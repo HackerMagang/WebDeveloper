@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Travel</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- CSS Bootstrap -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Header/Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">TravelSite</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#hero">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#overview">Overview</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#trips">Trips</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contact">Contact Us</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="jumbotron text-center">
+        <h1 class="display-4">Explore the World with Us!</h1>
+        <p class="lead">Unforgettable journeys and adventures await.</p>
+        <img src="images/a.jpg" alt="Hero Image" class="img-fluid">
+    </section>
+
+    <!-- Overview -->
+    <section id="overview" class="py-5 text-center">
+        <div class="container">
+            <h2>Why Choose Us?</h2>
+            <p>Discover the beauty of the world with our expert guides and tailored trips.</p>
+            <img src="images/b.jpg" alt="Overview Image" class="img-fluid">
+        </div>
+    </section>
+
+   <!-- Product Trips -->
+    <section id="trips" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Our Trips</h2>
+            <div class="row">
+                <?php foreach ($trips as $trip): ?>
+                <div class="col-md-4 mb-3">
+                    <div class="card">
+                        <img src="<?php echo base_url('images/' . $trip->id . '.jpg'); ?>" class="card-img-top" alt="<?php echo htmlspecialchars($trip->name); ?>">
+                        <div class="card-body">
+                            <h5 class="card-title"><?php echo htmlspecialchars($trip->name); ?></h5>
+                            <p class="card-text"><?php echo htmlspecialchars($trip->description); ?></p>
+                        </div>
+                    </div>
+                </div>
+                <?php endforeach; ?>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Us -->
+    <section id="contact" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-4">Contact Us</h2>
+            <div class="text-center">
+                <p>Have any questions? Feel free to reach out to us directly by sending an email.</p>
+                <!-- Example mailto link -->
+                <a href="mailto:your@email.com?subject=Travel Inquiry&body=Hi, I'm interested in learning more about your travel packages. Please get in touch with me." class="btn btn-primary">
+                    Send Email
+                </a>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-primary text-light py-4">
+        <div class="container">
+            <p>&copy; 2024 TravelSite. Explore the world with us.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript Bootstrap -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
