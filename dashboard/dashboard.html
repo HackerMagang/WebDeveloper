@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container mt-5">
+    <h2>Dashboard</h2>
+    <p>Welcome to your dashboard. Manage your account and trips from here.</p>
+    
+    <!-- Account Management -->
+    <div class="mt-4">
+        <h3>Account Management</h3>
+        <form>
+            <div class="form-group">
+                <label for="accountName">Name</label>
+                <input type="text" class="form-control" id="accountName" placeholder="Enter name">
+            </div>
+            <div class="form-group">
+                <label for="accountEmail">Email</label>
+                <input type="email" class="form-control" id="accountEmail" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter password">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Account</button>
+        </form>
+        
+        <h4 class="mt-4">Accounts List</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>John Doe</td>
+                    <td>johndoe@example.com</td>
+                    <td>
+                        <button class="btn btn-info btn-sm">Edit</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <!-- Trip Management -->
+    <div class="mt-4">
+        <h3>Trip Management</h3>
+        <form>
+            <div class="form-group">
+                <label for="tripName">Trip Name</label>
+                <input type="text" class="form-control" id="tripName" placeholder="Enter trip name">
+            </div>
+            <div class="form-group">
+                <label for="tripDescription">Description</label>
+                <textarea class="form-control" id="tripDescription" rows="3" placeholder="Enter trip description"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit Trip</button>
+        </form>
+        
+        <h4 class="mt-4">Trips List</h4>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Trip Name</th>
+                    <th scope="col">Description</th>
+                    <th scope="col">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Great Adventure</td>
+                    <td>An exciting journey through the mountains.</td>
+                    <td>
+                        <button class="btn btn-info btn-sm">Edit</button>
+                        <button class="btn btn-danger btn-sm">Delete</button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+</body>
+</html>
